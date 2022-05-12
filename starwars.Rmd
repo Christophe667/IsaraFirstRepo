@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
+library(tidyverse)
 ```
 
 ## Introduction
@@ -49,7 +50,9 @@ la commande ci dessous permet d'afficher l'espèce, le gendre et le nombre d'ind
 ```{r echo=TRUE, include=TRUE}
 starwars %>%  group_by(species, gender)%>% tally()
 
-
+ggplot(starwars ,aes(height, mass)) + geom_point()
 
 ```
+
+ON peut voir la répartition des tailles des indivisus
 
