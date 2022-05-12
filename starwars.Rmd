@@ -51,7 +51,7 @@ la commande ci dessous permet d'afficher l'espèce, le gendre et le nombre d'ind
 starwars %>%  group_by(species, gender)%>% tally()
 
 ggplot(starwars ,aes(height, mass)) + geom_point()
-
+ggplot(starwars, aes(height, mass, colour = species)) + geom_point()
 ```
 
 ON peut voir la répartition des tailles des indivisus
